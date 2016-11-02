@@ -32,11 +32,11 @@ RUN     mkdir $HOME/.m2 && \
         wget -q -O - $MVN_SETTING_URL > ~/.m2/settings.xml
 
 ##### Expose port for controller
-EXPOSE  6633 8181
+# EXPOSE  6633 8181
 
 ##### Sync source code folder
 VOLUME  ["/home/odl"]
-VOLUME  ["/root/.m2"]
+VOLUME  ["/root/.m2/repository"]
 
 ##### Clean
 RUN     yum clean all
