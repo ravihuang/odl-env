@@ -25,7 +25,7 @@ RUN     yum install -y wget git nano bzip2 zip nuget ant \
 
 ##### Environment
 ENV     MVN_SETTING_URL     https://raw.githubusercontent.com/opendaylight/odlparent/master/settings.xml
-ENV     MAVEN_OPTS          "-Xmx1024m -XX:MaxPermSize=512m"
+ENV     MAVEN_OPTS          "-Xmx1024m -XX:MaxMetaspaceSize=512m"
 
 ##### Maven setting
 RUN     mkdir $HOME/.m2 && \
