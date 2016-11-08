@@ -21,7 +21,7 @@ RUN     yum -y update && \
 RUN     yum install -y wget git bzip2 \
         make binutils gcc gcc-c++ boost-devel openssl-devel perl-ExtUtils-MakeMaker \
         unixODBC-devel gtest-devel redhat-lsb-core json-c-devel libcurl-devel \
-        perl-Digest-SHA tomcat-native graphviz --nogpgcheck            
+        perl-Digest-SHA tomcat-native --nogpgcheck            
   
 ##### Environment
 ENV     MVN_SETTING_URL     https://raw.githubusercontent.com/opendaylight/odlparent/master/settings.xml
