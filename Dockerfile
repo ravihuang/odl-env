@@ -18,11 +18,11 @@ RUN     yum -y update && \
         rpm --import "http://keyserver.ubuntu.com/pks/lookup?op=get&search=0x3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF" && \
         yum-config-manager --add-repo http://download.mono-project.com/repo/centos/  
         
-RUN     yum install -y wget git nano bzip2 zip nuget ant \
+RUN     yum install -y wget git bzip2 \
         make binutils gcc gcc-c++ boost-devel openssl-devel perl-ExtUtils-MakeMaker \
         unixODBC-devel gtest-devel redhat-lsb-core json-c-devel libcurl-devel \
         perl-Digest-SHA tomcat-native graphviz --nogpgcheck            
-
+  
 ##### Environment
 ENV     MVN_SETTING_URL     https://raw.githubusercontent.com/opendaylight/odlparent/master/settings.xml
 ENV     MAVEN_OPTS          "-Xmx1024m -XX:MaxMetaspaceSize=512m"
